@@ -31,27 +31,28 @@ L'entreprise de télécommunications perd 25% de ses clients chaque année. Le c
 ```
 Data Source → Feature Engineering → ML Pipeline → API → Dashboard
     ↓              ↓                   ↓          ↓        ↓
-  Kaggle        Polars            Scikit-learn  FastAPI  Streamlit
-  CSV           Feature Store        MLflow     Docker   Monitoring
+  Kaggle         pandas          scikit-learn  FastAPI  Streamlit
+  CSV            numpy             XGBoost     Docker    Plotly
 ```
 
 **📦 Livrables Attendus**
-1. **Notebook d'exploration** avec analyse des patterns de churn
-2. **Pipeline ML** avec validation temporelle et feature importance
-3. **API REST** pour scoring en temps réel (FastAPI)
-4. **Dashboard métier** interactif pour le customer success
-5. **Monitoring** du modèle avec détection de drift
+1. **Notebook Jupyter** avec analyse exploratoire (pandas, matplotlib, seaborn)
+2. **Pipeline ML** avec scikit-learn et XGBoost (validation croisée)
+3. **API REST** FastAPI containerisée avec Docker
+4. **Dashboard Streamlit** pour visualiser les prédictions
+5. **MLflow** pour tracker les expériences et modèles
 
 **🎯 Critères de Réussite**
 - Recall > 80% sur la classe churn (minimiser les faux négatifs)
 - API avec latence < 100ms
-- Dashboard utilisable par des non-techniques
+- Déploiement Docker fonctionnel
 
 **🛠️ Stack Recommandée**
-- **ML** : Python, scikit-learn, XGBoost, MLflow
-- **Data** : Polars (plus rapide que pandas)
-- **API** : FastAPI, Pydantic
-- **Deploy** : Docker, GitHub Actions
+- **ML** : Python, pandas, numpy, scikit-learn, XGBoost
+- **MLOps** : MLflow, Docker
+- **API** : FastAPI
+- **Viz** : Streamlit, plotly
+- **Dev** : Jupyter, Git
 
 ---
 
@@ -70,27 +71,28 @@ La banque subit 2M€ de pertes annuelles dues à la fraude. Les transactions fr
 ```
 Transaction Stream → Processing → ML Model → Decision → Alert
         ↓              ↓            ↓          ↓        ↓
-    CSV + Faker    Streaming     XGBoost    Redis   Webhook
-    Simulation      DuckDB       Online      Rules   Dashboard
+    CSV + Faker      pandas      XGBoost    FastAPI   Plotly
+    Simulation     numpy/scipy  scikit-learn Docker   Dashboard
 ```
 
 **📦 Livrables Attendus**
 1. **Simulateur de transactions** avec Faker pour stream temps réel
-2. **Pipeline streaming** local avec asyncio Python
-3. **Modèle ML** avec gestion du déséquilibre (SMOTE)
-4. **Système d'alertes** avec niveaux de risque
-5. **Dashboard monitoring** Streamlit temps réel
+2. **Feature engineering** avec pandas et numpy
+3. **Modèle ML** XGBoost avec gestion du déséquilibre (SMOTE)
+4. **API REST** FastAPI avec prédictions temps réel
+5. **Dashboard monitoring** avec plotly/dash
 
 **🎯 Critères de Réussite**
 - Precision > 90% (limiter les faux positifs)
-- Latence < 50ms par prédiction
-- Gestion de 1000 transactions/seconde en local
+- Latence < 50ms par prédiction via API
+- Containerisation Docker complète
 
 **🛠️ Stack Recommandée**
-- **ML** : Python, XGBoost, Imbalanced-learn
-- **Streaming** : asyncio, threading
-- **Cache** : Redis local ou dict Python
-- **Viz** : Streamlit avec refresh auto
+- **ML** : Python, pandas, scikit-learn, XGBoost, imbalanced-learn
+- **API** : FastAPI, uvicorn
+- **Container** : Docker
+- **Viz** : plotly, matplotlib
+- **Dev** : Jupyter, VS Code
 
 ---
 
@@ -109,27 +111,28 @@ La marketplace e-commerce veut maximiser son chiffre d'affaires en ajustant les 
 ```
 Historical Data → Analysis → Price Model → Simulation → Dashboard
       ↓             ↓           ↓            ↓          ↓
-   Kaggle CSV     Polars    Elasticity    Monte Carlo  Marimo
-   Parquet        DuckDB    Optimization    A/B Sim    Interactive
+   Kaggle CSV     pandas    scikit-learn  Streamlit   Power BI
+   PostgreSQL      numpy     XGBoost      plotly      Tableau
 ```
 
 **📦 Livrables Attendus**
-1. **Analyse élasticité prix** par catégorie de produits
-2. **Modèle de demande** avec saisonnalité (Prophet)
-3. **Algorithme d'optimisation** des prix (scipy.optimize)
-4. **Simulateur A/B** pour tester les stratégies
-5. **Dashboard Marimo** interactif pour les PMs
+1. **Analyse exploratoire** avec pandas et matplotlib
+2. **Modèle de demande** avec scikit-learn (régression, élasticité)
+3. **Optimisation des prix** avec scipy.optimize
+4. **Dashboard interactif** Streamlit ou Power BI Desktop
+5. **Tests A/B simulés** pour validation stratégie
 
 **🎯 Critères de Réussite**
 - Identification de l'élasticité par segment
 - Simulation montrant +10% CA potentiel
-- Interface simple pour tester des scénarios
+- Dashboard utilisable par les Product Managers
 
 **🛠️ Stack Recommandée**
-- **Data** : Polars, DuckDB
-- **Modeling** : Prophet, statsmodels
-- **Optimization** : scipy, OR-Tools
-- **Viz** : Marimo (notebooks interactifs)
+- **Data** : pandas, numpy, PostgreSQL
+- **ML** : scikit-learn, XGBoost
+- **Optimization** : scipy
+- **Viz** : Power BI ou Tableau (versions gratuites)
+- **Dev** : Jupyter, Git
 
 ---
 
@@ -146,29 +149,30 @@ L'entreprise reçoit des milliers d'avis clients mais n'a pas le temps de les an
 
 **🏗️ Architecture Technique**
 ```
-Reviews Data → NLP Pipeline → Topic Analysis → Insights → Dashboard
-     ↓            ↓              ↓             ↓          ↓
-  CSV+Reddit   Transformers    BERTopic    Clustering  Streamlit
-  PRAW API     Sentiment      Aspects      Keywords    WordCloud
+Reviews Data → NLP Pipeline → Analysis → Insights → Dashboard
+     ↓            ↓             ↓          ↓          ↓
+  CSV+Reddit    pandas       TensorFlow  matplotlib  Streamlit
+  PRAW API    scikit-learn  Transformers  seaborn   Power BI
 ```
 
 **📦 Livrables Attendus**
 1. **Collecteur Reddit** avec PRAW (Python Reddit API Wrapper)
-2. **Pipeline sentiment** avec Hugging Face models
-3. **Extraction topics** automatique (BERTopic)
-4. **Analyse aspects** (price, quality, shipping)
-5. **Dashboard** avec nuages de mots et tendances
+2. **Pipeline NLP** avec scikit-learn (TF-IDF, classification)
+3. **Modèle sentiment** avec transformers pré-entraînés
+4. **Visualisations** matplotlib/seaborn pour insights
+5. **Dashboard Power BI** ou Streamlit avec métriques
 
 **🎯 Critères de Réussite**
 - Accuracy > 85% sur classification sentiment
-- Détection automatique des pain points majeurs
-- Actualisation quotidienne avec Reddit
+- Extraction automatique des topics principaux
+- Dashboard actualisé quotidiennement
 
 **🛠️ Stack Recommandée**
-- **APIs** : PRAW pour Reddit
-- **NLP** : transformers, spaCy
-- **Topics** : BERTopic, Top2Vec
-- **Viz** : Streamlit, WordCloud
+- **APIs** : PRAW, requests
+- **NLP** : scikit-learn, NLTK, transformers
+- **Data** : pandas, numpy
+- **Viz** : matplotlib, seaborn, Power BI
+- **Deploy** : Docker, Streamlit
 
 ---
 
@@ -226,29 +230,30 @@ La startup e-commerce n'a aucune visibilité sur ses performances. Excel ne suff
 
 **🏗️ Architecture Technique**
 ```
-Raw Data → Transformation → Metrics → Visualization → Sharing
-    ↓           ↓            ↓          ↓            ↓
-  Excel       DuckDB        SQL      Streamlit    Public URL
-  CSV         Polars      Metrics     Plotly     GitHub Pages
+Raw Data → ETL → Database → BI Tool → Dashboard
+    ↓        ↓       ↓         ↓          ↓
+  Excel    pandas   PostgreSQL  Power BI   DAX
+  CSV      Python     MySQL     Tableau   Sharing
 ```
 
 **📦 Livrables Attendus**
-1. **ETL pipeline** avec DuckDB pour performance
-2. **Metrics layer** avec définitions SQL claires
-3. **Dashboard interactif** Streamlit multi-pages
-4. **Simulation temps réel** avec auto-refresh
-5. **Documentation** des KPIs et calculs
+1. **ETL pipeline** Python avec pandas pour nettoyer les données
+2. **Base PostgreSQL** avec modèle en étoile
+3. **Dashboard Power BI** avec KPIs e-commerce (CA, conversion, etc.)
+4. **Mesures DAX** avancées pour calculs complexes
+5. **Version Tableau** alternative (Tableau Public gratuit)
 
 **🎯 Critères de Réussite**
 - Chargement dashboard < 3 secondes
-- KPIs standards e-commerce (CAC, LTV, etc.)
-- Exportable et partageable facilement
+- KPIs standards e-commerce complets
+- Actualisation automatique quotidienne
 
 **🛠️ Stack Recommandée**
-- **Data** : DuckDB (SQL engine)
-- **Transform** : Polars + SQL
-- **Viz** : Streamlit + Plotly
-- **Deploy** : Streamlit Cloud (gratuit)
+- **ETL** : Python, pandas, SQLAlchemy
+- **Database** : PostgreSQL ou MySQL
+- **BI** : Power BI Desktop (gratuit) ou Tableau Public
+- **Languages** : SQL, DAX (Power BI), Python
+- **Deploy** : Power BI Service (version gratuite)
 
 ---
 
@@ -304,29 +309,30 @@ L'entreprise dépense sur Google, Facebook, email sans savoir ce qui convertit. 
 
 **🏗️ Architecture Technique**
 ```
-Journey Data → Attribution → ROAS Analysis → Optimization → Report
-      ↓           ↓             ↓              ↓           ↓
-   CSV Data   Markov Chain   Channel ROI    Linear Prog  Quarto
-   pytrends    Heuristics    Incrementality  Budget Opt  Dashboard
+Journey Data → Attribution → Analysis → Optimization → Report
+      ↓           ↓           ↓           ↓            ↓
+   CSV Data     pandas      matplotlib  scipy      Power BI
+   pytrends   scikit-learn   seaborn   optimize    Tableau
 ```
 
 **📦 Livrables Attendus**
-1. **Customer journey** visualization
-2. **Modèles attribution** (first/last click, data-driven)
-3. **Analyse ROAS** par canal avec trends
-4. **Optimiseur budget** avec contraintes
-5. **Rapport Quarto** automatisé mensuel
+1. **Customer journey** mapping avec pandas
+2. **Modèles attribution** (first/last click, linear, time decay)
+3. **Analyse ROAS** par canal avec visualisations
+4. **Optimisation budget** avec scipy.optimize
+5. **Dashboard Power BI** pour équipe marketing
 
 **🎯 Critères de Réussite**
-- Attribution model vs reality check
-- Budget recommendations claires
-- Dashboard actionnable pour marketing
+- Attribution model validé vs conversions réelles
+- Recommandations budget actionnables
+- Dashboard self-service pour marketers
 
 **🛠️ Stack Recommandée**
-- **Attribution** : Python, ChannelAttribution
+- **Data** : pandas, numpy, PostgreSQL
+- **Attribution** : Python custom models
 - **Trends** : pytrends API
-- **Optimization** : PuLP, scipy
-- **Report** : Quarto + great_tables
+- **Optimization** : scipy
+- **BI** : Power BI ou Tableau
 
 ---
 
@@ -423,30 +429,30 @@ Analyser les cryptos nécessite des données temps réel multi-sources. Objectif
 
 **🏗️ Architecture Technique**
 ```
-APIs → Collection → Storage → Processing → Serving → Monitoring
-  ↓        ↓          ↓         ↓          ↓         ↓
-Binance  Asyncio    DuckDB    Polars    FastAPI   Grafana
-CoinGecko Schedule  Parquet   Window    REST API  Prometheus
+APIs → Collection → Storage → Processing → Serving
+  ↓        ↓          ↓         ↓          ↓
+Binance   Python    PostgreSQL  pandas    FastAPI
+CoinGecko Airflow     Parquet    Spark    Docker
 ```
 
 **📦 Livrables Attendus**
-1. **Collecteurs API** asynchrones avec retry
-2. **Storage optimisé** (Parquet partitionné)
-3. **Pipeline incremental** avec windowing
-4. **API serving** pour backtesting
-5. **Monitoring** santé du pipeline
+1. **DAGs Airflow** pour orchestration des collectes
+2. **Storage PostgreSQL** + Parquet pour historique
+3. **Processing Spark** pour agrégations (si volume important)
+4. **API REST** avec FastAPI pour servir les données
+5. **Monitoring** avec logs et métriques Airflow
 
 **🎯 Critères de Réussite**
-- 99% uptime sur collecte données
-- Latence API < 100ms
-- Historique + temps réel unifié
+- Pipeline Airflow stable avec retry logic
+- Données collectées toutes les minutes
+- API performante pour backtesting
 
 **🛠️ Stack Recommandée**
-- **Collection** : httpx, asyncio
-- **Storage** : DuckDB, Parquet
-- **Processing** : Polars
-- **API** : FastAPI
-- **Orchestration** : APScheduler
+- **Orchestration** : Apache Airflow
+- **Storage** : PostgreSQL, Parquet
+- **Processing** : pandas ou PySpark
+- **API** : FastAPI, Docker
+- **Cloud** : AWS S3 ou Azure Blob (optionnel)
 
 ---
 
@@ -505,30 +511,30 @@ Analyser les tendances Twitter nécessite du traitement temps réel. Objectif : 
 
 **🏗️ Architecture Technique**
 ```
-Twitter → Stream Processing → NLP → Storage → Analytics → Alerts
-   ↓           ↓              ↓       ↓         ↓         ↓
- API v2     AsyncIO      Transformers DuckDB  Streamlit  Discord
-Scraper    Queue/Buffer  Sentiment   Time DB  Real-time  Webhook
+Twitter → Stream Processing → ML → Storage → Dashboard
+   ↓           ↓             ↓       ↓         ↓
+ API v2    Apache Kafka   TensorFlow PostgreSQL Power BI
+Scraper    Apache Spark   scikit-learn  Redis   Grafana
 ```
 
 **📦 Livrables Attendus**
-1. **Collecteur Twitter** respectant rate limits
-2. **Queue processing** avec buffer local
-3. **NLP pipeline** sentiment + entities
-4. **Storage** time-series optimisé
-5. **Dashboard** temps réel + alertes
+1. **Producer Kafka** pour ingestion tweets
+2. **Spark Streaming** pour processing temps réel
+3. **Pipeline ML** sentiment avec scikit-learn
+4. **Storage PostgreSQL** pour analytics
+5. **Dashboard temps réel** Grafana ou Power BI
 
 **🎯 Critères de Réussite**
-- Processing < 1 sec par tweet
-- Détection trending topics automatique
-- Visualisation temps réel fluide
+- Processing < 1 sec par batch de tweets
+- Détection trending topics en temps réel
+- Architecture scalable avec Kafka/Spark
 
 **🛠️ Stack Recommandée**
-- **Streaming** : tweepy, asyncio
-- **Queue** : Python Queue, Redis
-- **NLP** : transformers
-- **Storage** : DuckDB + TimescaleDB
-- **Viz** : Streamlit avec auto-refresh
+- **Streaming** : Apache Kafka, Apache Spark
+- **ML** : scikit-learn, TensorFlow
+- **Storage** : PostgreSQL, Redis
+- **Viz** : Grafana, Power BI
+- **Deploy** : Docker Compose
 
 ---
 
@@ -575,7 +581,7 @@ Data Sources → Profiling → Testing → Monitoring → Alerts
 ### 15. Modern Data Stack Local
 
 **🎯 Problématique Business**
-Construire une infrastructure data moderne sans cloud pour apprendre. Objectif : stack complète tournant sur un laptop.
+Construire une infrastructure data moderne sans cloud pour apprendre. Objectif : stack complète tournant sur un laptop avec les outils du marché.
 
 **📊 Dataset**
 - **NYC Taxi** : [TLC Trip Data](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page)
@@ -587,28 +593,28 @@ Construire une infrastructure data moderne sans cloud pour apprendre. Objectif :
 ```
 Sources → Ingestion → Transform → Analytics → Orchestration
    ↓         ↓          ↓          ↓            ↓
-Multiple   Meltano      dbt      DuckDB      Dagster
-Formats    Singer     Models    BI Layer    Schedule
+Multiple   Python       dbt      PostgreSQL   Airflow
+Formats    pandas      SQL       Power BI     Docker
 ```
 
 **📦 Livrables Attendus**
-1. **Architecture** complète en local
-2. **Ingestion** avec Meltano/Singer
-3. **Transformation** dbt + DuckDB
-4. **BI layer** avec Metabase/Superset
-5. **Documentation** setup et best practices
+1. **Architecture complète** avec Docker Compose
+2. **Pipeline ETL** Python + pandas
+3. **Transformations dbt** pour modélisation
+4. **PostgreSQL** comme data warehouse
+5. **Orchestration Airflow** pour automatisation
 
 **🎯 Critères de Réussite**
-- Stack complète sur machine 8GB RAM
-- Pipeline end-to-end fonctionnel
-- Reproductible via Docker Compose
+- Stack complète fonctionnelle en local
+- Pipeline reproductible via Docker
+- Documentation claire pour réutilisation
 
 **🛠️ Stack Recommandée**
-- **Ingestion** : Meltano
-- **Transform** : dbt-duckdb
-- **Database** : DuckDB
-- **Orchestration** : Dagster
-- **BI** : Metabase (léger)
+- **Orchestration** : Apache Airflow
+- **ETL** : Python, pandas
+- **Transform** : dbt
+- **Database** : PostgreSQL
+- **BI** : Power BI Desktop ou Tableau Public
 - **Containers** : Docker Compose
 
 ---
