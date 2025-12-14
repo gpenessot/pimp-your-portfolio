@@ -1,0 +1,40 @@
+# Core Data Science
+pandas==2.1.4
+numpy==1.26.2
+scikit-learn==1.3.2
+xgboost==2.0.3
+imbalanced-learn==0.11.0
+
+# Visualization
+matplotlib==3.8.2
+seaborn==0.13.0
+plotly==5.18.0
+
+# ML Explainability
+shap==0.44.0
+
+# MLOps
+mlflow==2.9.2
+
+# API
+fastapi==0.109.0
+uvicorn[standard]==0.25.0
+pydantic==2.5.3
+python-multipart==0.0.6
+
+# Dashboard
+streamlit==1.29.0
+
+# Utils
+python-dotenv==1.0.0
+pyyaml==6.0.1
+
+# Dev Tools
+jupyter==1.0.0
+ipykernel==6.27.1
+pytest==7.4.3
+black==23.12.1
+flake8==7.0.0
+
+# Docker
+gunicorn==21.2.0
