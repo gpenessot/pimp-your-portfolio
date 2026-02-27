@@ -687,7 +687,7 @@ Formats    pandas      SQL       Power BI     Docker
 4. Itérez et améliorez
 5. Partagez vos progrès !
 
-**Besoin d'aide ?** La communauté data est bienveillante. N'hésitez pas à demander sur Twitter/LinkedIn avec #DataPortfolio
+**Besoin d'aide ?** La communauté data est bienveillante. N'hésitez pas à demander sur X/LinkedIn :)
 
 ---
 
