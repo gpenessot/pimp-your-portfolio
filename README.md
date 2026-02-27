@@ -57,7 +57,7 @@ la structure, les outils et la méthode pour les réaliser.
 - 📚 Auteur "Business Intelligence avec Python" (ENI Editions, 600+ ventes)
 - 🎓 Formateur LinkedIn Learning
 - 💼 28k+ abonnés LinkedIn
-- 📬 Newsletter [DataGyver](lien) — tips data chaque semaine
+- 📬 Newsletter [DataGyver](lien) — tips data chaque mois
 
 ---
 
