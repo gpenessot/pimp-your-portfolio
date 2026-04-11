@@ -47,6 +47,7 @@ la structure, les outils et la méthode pour les réaliser.
 | **J'ai un week-end, je veux shipper 3 projets pros** | [ShipData — Le boilerplate data](https://www.mes-formations-data.fr/formation/shipdata) | 49€ |
 | **Je veux le système complet : GitHub + LinkedIn + stratégie** | [Portfolio Impactant — La formation complète](https://www.mes-formations-data.fr/formation/portfolio-impactant) | 197€ |
 | **Je veux créer des apps Streamlit production-ready** | [Streamlit Unleashed — Apps que les recruteurs bookmarkent](https://www.mes-formations-data.fr/formation/streamlit-unleashed) | 297€ |
+| **Je veux construire des apps data Python que les outils BI ne savent pas faire** | [Data App Builder — L'incubateur 6 semaines](https://www.mes-formations-data.fr/formation/bi-avec-python) | 990€ |
 
 ---
 
@@ -56,7 +57,7 @@ la structure, les outils et la méthode pour les réaliser.
 
 - 📚 Auteur "Business Intelligence avec Python" (ENI Editions, 600+ ventes)
 - 🎓 Formateur LinkedIn Learning
-- 💼 28k+ abonnés LinkedIn
+- 💼 29k+ abonnés LinkedIn
 - 📬 Newsletter [DataGyver](lien) — tips data chaque mois
 
 ---
@@ -75,11 +76,12 @@ L'entreprise de télécommunications perd 25% de ses clients chaque année. Le c
 - **Enrichissement** : Simuler des events temps réel avec Faker Python
 
 **🏗️ Architecture Technique**
-```
-Data Source → Feature Engineering → ML Pipeline → API → Dashboard
-    ↓              ↓                   ↓          ↓        ↓
-  Kaggle         pandas          scikit-learn  FastAPI  Streamlit
-  CSV            numpy             XGBoost     Docker    Plotly
+```mermaid
+flowchart LR
+    A[Kaggle CSV] --> B[Feature Engineering\npandas · numpy]
+    B --> C[ML Pipeline\nXGBoost]
+    C --> D[API\nFastAPI · Docker]
+    D --> E[Dashboard\nStreamlit · Plotly]
 ```
 
 **📦 Livrables Attendus**
@@ -115,11 +117,12 @@ La banque subit 2M€ de pertes annuelles dues à la fraude. Les transactions fr
 - **Features** : 30 variables (PCA transformées) + montant + temps
 
 **🏗️ Architecture Technique**
-```
-Transaction Stream → Processing → ML Model → Decision → Alert
-        ↓              ↓            ↓          ↓        ↓
-    CSV + Faker      pandas      XGBoost    FastAPI   Plotly
-    Simulation     numpy/scipy  scikit-learn Docker   Dashboard
+```mermaid
+flowchart LR
+    A[CSV + Faker\nSimulation] --> B[Processing\npandas · numpy]
+    B --> C[ML Model\nXGBoost]
+    C --> D[Decision\nFastAPI · Docker]
+    D --> E[Alert\nPlotly Dashboard]
 ```
 
 **📦 Livrables Attendus**
@@ -155,11 +158,12 @@ La marketplace e-commerce veut maximiser son chiffre d'affaires en ajustant les 
 - **Features** : Prix, catégorie, reviews, saisonnalité, géolocalisation
 
 **🏗️ Architecture Technique**
-```
-Historical Data → Analysis → Price Model → Simulation → Dashboard
-      ↓             ↓           ↓            ↓          ↓
-   Kaggle CSV     pandas    scikit-learn  Streamlit   Power BI
-   PostgreSQL      numpy     XGBoost      plotly      Tableau
+```mermaid
+flowchart LR
+    A[Kaggle CSV\nPostgreSQL] --> B[Analysis\npandas · numpy]
+    B --> C[Price Model\nXGBoost]
+    C --> D[Simulation\nStreamlit · Plotly]
+    D --> E[Dashboard\nPower BI · Tableau]
 ```
 
 **📦 Livrables Attendus**
@@ -195,11 +199,12 @@ L'entreprise reçoit des milliers d'avis clients mais n'a pas le temps de les an
 - **Languages** : Principalement anglais
 
 **🏗️ Architecture Technique**
-```
-Reviews Data → NLP Pipeline → Analysis → Insights → Dashboard
-     ↓            ↓             ↓          ↓          ↓
-  CSV+Reddit    pandas       TensorFlow  matplotlib  Streamlit
-  PRAW API    scikit-learn  Transformers  seaborn   Power BI
+```mermaid
+flowchart LR
+    A[CSV + Reddit\nPRAW API] --> B[NLP Pipeline\npandas · scikit-learn]
+    B --> C[Analysis\nTransformers]
+    C --> D[Insights\nmatplotlib · seaborn]
+    D --> E[Dashboard\nStreamlit · Power BI]
 ```
 
 **📦 Livrables Attendus**
@@ -235,11 +240,12 @@ Le gestionnaire réseau doit équilibrer production et consommation. Une erreur 
 - **Features** : Consommation, température, calendrier
 
 **🏗️ Architecture Technique**
-```
-Time Series → Feature Engineering → ML Models → API → Monitoring
-     ↓              ↓                 ↓         ↓        ↓
-  CSV+Weather     Polars          LSTM+XGB   FastAPI  Grafana
-  OpenWeather   Lag Features     Ensemble    Cache    Alerts
+```mermaid
+flowchart LR
+    A[CSV + Weather\nOpenWeather] --> B[Feature Engineering\nPolars · Lags]
+    B --> C[ML Models\nLSTM · XGBoost]
+    C --> D[API\nFastAPI · Cache]
+    D --> E[Monitoring\nGrafana · Alerts]
 ```
 
 **📦 Livrables Attendus**
@@ -276,11 +282,12 @@ La startup e-commerce n'a aucune visibilité sur ses performances. Excel ne suff
 - **Métriques** : CA, panier moyen, conversion, cohortes
 
 **🏗️ Architecture Technique**
-```
-Raw Data → ETL → Database → BI Tool → Dashboard
-    ↓        ↓       ↓         ↓          ↓
-  Excel    pandas   PostgreSQL  Power BI   DAX
-  CSV      Python     MySQL     Tableau   Sharing
+```mermaid
+flowchart LR
+    A[Excel · CSV] --> B[ETL\npandas · Python]
+    B --> C[Database\nPostgreSQL]
+    C --> D[BI Tool\nPower BI · Tableau]
+    D --> E[Dashboard\nDAX · Sharing]
 ```
 
 **📦 Livrables Attendus**
@@ -316,11 +323,12 @@ L'app mobile perd 60% des utilisateurs après J+1. Objectif : comprendre les com
 - **Events** : Install, sessions, purchases, uninstall
 
 **🏗️ Architecture Technique**
-```
-Event Data → Cohort Analysis → Retention → Segmentation → Actions
-     ↓             ↓              ↓           ↓           ↓
-  CSV+Faker     Polars         Lifelines   Clustering   Marimo
-  Generator    Cohorts        Survival     K-means     Report
+```mermaid
+flowchart LR
+    A[CSV + Faker\nGenerator] --> B[Cohort Analysis\nPolars]
+    B --> C[Retention\nLifelines · Survival]
+    C --> D[Segmentation\nK-means]
+    D --> E[Report\nMarimo]
 ```
 
 **📦 Livrables Attendus**
@@ -355,11 +363,12 @@ L'entreprise dépense sur Google, Facebook, email sans savoir ce qui convertit. 
 - **Canaux** : Paid search, social, email, organic
 
 **🏗️ Architecture Technique**
-```
-Journey Data → Attribution → Analysis → Optimization → Report
-      ↓           ↓           ↓           ↓            ↓
-   CSV Data     pandas      matplotlib  scipy      Power BI
-   pytrends   scikit-learn   seaborn   optimize    Tableau
+```mermaid
+flowchart LR
+    A[CSV + pytrends] --> B[Attribution\npandas · scikit-learn]
+    B --> C[Analysis\nmatplotlib · seaborn]
+    C --> D[Optimization\nscipy]
+    D --> E[Report\nPower BI · Tableau]
 ```
 
 **📦 Livrables Attendus**
@@ -395,11 +404,12 @@ L'entreprise a 25% de turnover (vs 15% marché). Chaque départ coûte 50k€. O
 - **Features** : Satisfaction, salaire, promotion, distance
 
 **🏗️ Architecture Technique**
-```
-HR Data → Statistical Analysis → ML Model → Risk Score → Actions
-   ↓            ↓                 ↓           ↓          ↓
- Kaggle     Polars/DuckDB    Scikit-learn  Dashboard   Email
- CSV          EDA Stats       Explainable   Streamlit  Alerts
+```mermaid
+flowchart LR
+    A[Kaggle CSV] --> B[Statistical Analysis\nPolars · DuckDB]
+    B --> C[ML Model\nscikit-learn · Explainable]
+    C --> D[Dashboard\nStreamlit]
+    D --> E[Actions\nEmail · Alerts]
 ```
 
 **📦 Livrables Attendus**
@@ -434,11 +444,12 @@ Le distributeur subit 15% de ruptures et 30% de surstocks. Objectif : optimiser 
 - **Features** : Ventes, stocks, délais, saisonnalité
 
 **🏗️ Architecture Technique**
-```
-Supply Data → Analytics → Forecasting → Optimization → Monitoring
-     ↓           ↓           ↓             ↓            ↓
-  CSV+Sim      DuckDB     Prophet      Inventory    Great Tables
-  Events       Metrics    Time Series   Algorithm    Reports
+```mermaid
+flowchart LR
+    A[CSV + Simulation\nEvents] --> B[Analytics\nDuckDB · Metrics]
+    B --> C[Forecasting\nProphet · Time Series]
+    C --> D[Optimization\nInventory Algorithm]
+    D --> E[Monitoring\nGreat Tables · Reports]
 ```
 
 **📦 Livrables Attendus**
@@ -475,11 +486,12 @@ Analyser les cryptos nécessite des données temps réel multi-sources. Objectif
 - **Features** : Prix, volume, market cap, social metrics
 
 **🏗️ Architecture Technique**
-```
-APIs → Collection → Storage → Processing → Serving
-  ↓        ↓          ↓         ↓          ↓
-Binance   Python    PostgreSQL  pandas    FastAPI
-CoinGecko Airflow     Parquet    Spark    Docker
+```mermaid
+flowchart LR
+    A[Binance\nCoinGecko APIs] --> B[Collection\nPython · Airflow]
+    B --> C[Storage\nPostgreSQL · Parquet]
+    C --> D[Processing\npandas · Spark]
+    D --> E[Serving\nFastAPI · Docker]
 ```
 
 **📦 Livrables Attendus**
@@ -517,11 +529,12 @@ Les données publiques sont éparpillées et mal formatées. Objectif : créer u
 - **Formats** : CSV, JSON, XML, APIs
 
 **🏗️ Architecture Technique**
-```
-Open Data → Ingestion → Cleaning → Warehouse → API → Portal
-    ↓          ↓          ↓          ↓        ↓       ↓
-Multiple    Airbyte    Pandas    DuckDB   FastAPI  Datasette
-Sources     Python    Cleaning   Storage   GraphQL  Explorer
+```mermaid
+flowchart LR
+    A[Open Data\nMultiple Sources] --> B[Ingestion\nAirbyte · Python]
+    B --> C[Cleaning\npandas]
+    C --> D[Warehouse\nDuckDB]
+    D --> E[API · Portal\nFastAPI · Datasette]
 ```
 
 **📦 Livrables Attendus**
@@ -557,11 +570,12 @@ Analyser les tendances Twitter nécessite du traitement temps réel. Objectif : 
 - **Features** : Texte, metrics, user info, géo
 
 **🏗️ Architecture Technique**
-```
-Twitter → Stream Processing → ML → Storage → Dashboard
-   ↓           ↓             ↓       ↓         ↓
- API v2    Apache Kafka   TensorFlow PostgreSQL Power BI
-Scraper    Apache Spark   scikit-learn  Redis   Grafana
+```mermaid
+flowchart LR
+    A[Twitter API\nScraper] --> B[Kafka\nProducer]
+    B --> C[Spark Streaming\nProcessing]
+    C --> D[Storage\nPostgreSQL · Redis]
+    D --> E[Dashboard\nGrafana · Power BI]
 ```
 
 **📦 Livrables Attendus**
@@ -597,11 +611,12 @@ Les équipes data passent 40% du temps à debugger des erreurs de qualité. Obje
 - **Tests** : Schéma, distribution, business rules
 
 **🏗️ Architecture Technique**
-```
-Data Sources → Profiling → Testing → Monitoring → Alerts
-      ↓           ↓          ↓         ↓          ↓
-   Various    ydata-profiling  GE    Evidently  Slack
-   Formats     Pandas Profile Soda   ML Drift   Email
+```mermaid
+flowchart LR
+    A[Data Sources\nVarious Formats] --> B[Profiling\nydata-profiling]
+    B --> C[Testing\nGreat Expectations · Soda]
+    C --> D[Monitoring\nEvidently · ML Drift]
+    D --> E[Alerts\nSlack · Email]
 ```
 
 **📦 Livrables Attendus**
@@ -637,11 +652,12 @@ Construire une infrastructure data moderne sans cloud pour apprendre. Objectif :
 - **Volume** : 10GB+ pour tester les limites
 
 **🏗️ Architecture Technique**
-```
-Sources → Ingestion → Transform → Analytics → Orchestration
-   ↓         ↓          ↓          ↓            ↓
-Multiple   Python       dbt      PostgreSQL   Airflow
-Formats    pandas      SQL       Power BI     Docker
+```mermaid
+flowchart LR
+    A[Sources\nMultiple Formats] --> B[Ingestion\nPython · pandas]
+    B --> C[Transform\ndbt · SQL]
+    C --> D[Analytics\nPostgreSQL]
+    D --> E[Orchestration\nAirflow · Docker]
 ```
 
 **📦 Livrables Attendus**
