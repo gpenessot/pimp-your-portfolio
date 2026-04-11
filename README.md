@@ -1,8 +1,39 @@
+![Bannière du repo](assets/github-banner.avif)
+
 # 15 Projets Data pour un Portfolio Professionnel
 
 Ton GitHub ne te vend pas. Ce repo t'aide à changer ça.
 
 > "Rends-toi visible par ce que tu produis, pas par ce qu'on t'autorise à faire."
+
+---
+
+## Table des matières
+
+- [Le problème](#le-problème)
+- [Ce que contient ce repo](#ce-que-contient-ce-repo-gratuit)
+- [Tu veux aller plus loin ?](#tu-veux-aller-plus-loin-)
+- [Qui suis-je ?](#qui-suis-je-)
+- [🔬 Data Scientist](#-data-scientist-5-projets)
+  - [1. Prédiction de Churn Client - Télécoms](#1-prédiction-de-churn-client---télécoms)
+  - [2. Détection de Fraude Bancaire Temps Réel](#2-détection-de-fraude-bancaire-temps-réel)
+  - [3. Optimisation Prix E-commerce](#3-optimisation-prix-e-commerce)
+  - [4. Analyse Sentiment Avis Produits](#4-analyse-sentiment-avis-produits)
+  - [5. Prévision Consommation Énergétique](#5-prévision-consommation-énergétique)
+- [📊 Data Analyst](#-data-analyst-5-projets)
+  - [6. Dashboard KPIs E-commerce](#6-dashboard-kpis-e-commerce)
+  - [7. Analyse Cohortes Application Mobile](#7-analyse-cohortes-application-mobile)
+  - [8. Attribution Marketing Multi-Touch](#8-attribution-marketing-multi-touch)
+  - [9. People Analytics - Turnover](#9-people-analytics---turnover)
+  - [10. Supply Chain Analytics](#10-supply-chain-analytics)
+- [⚙️ Data Engineer](#️-data-engineer-5-projets)
+  - [11. Pipeline Crypto Trading](#11-pipeline-crypto-trading)
+  - [12. ETL Open Data Gouvernement](#12-etl-open-data-gouvernement)
+  - [13. Streaming Twitter/X Analytics](#13-streaming-twitterx-analytics)
+  - [14. Data Quality Platform](#14-data-quality-platform)
+  - [15. Modern Data Stack Local](#15-modern-data-stack-local)
+- [💡 Conseils pour Réussir](#-conseils-pour-réussir)
+- [🔗 Ressources Complémentaires](#-ressources-complémentaires)
 
 ---
 
