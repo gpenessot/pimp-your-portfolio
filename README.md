@@ -29,7 +29,7 @@ Ton GitHub ne te vend pas. Ce repo t'aide à changer ça.
 - [⚙️ Data Engineer](#️-data-engineer-5-projets)
   - [11. Pipeline Crypto Trading](#11-pipeline-crypto-trading)
   - [12. ETL Open Data Gouvernement](#12-etl-open-data-gouvernement)
-  - [13. Streaming Twitter/X Analytics](#13-streaming-twitterx-analytics)
+  - [13. Streaming Bluesky Analytics](#13-streaming-bluesky-analytics)
   - [14. Data Quality Platform](#14-data-quality-platform)
   - [15. Modern Data Stack Local](#15-modern-data-stack-local)
 - [💡 Conseils pour Réussir](#-conseils-pour-réussir)
@@ -64,7 +64,7 @@ Chaque projet inclut :
 |---|---|
 | 🔬 **Data Scientist** | Churn télécom · Fraude bancaire · Optimisation prix · Sentiment NLP · Prévision énergie |
 | 📊 **Data Analyst** | KPIs e-commerce · Cohortes mobile · Attribution marketing · People Analytics · Supply Chain |
-| ⚙️ **Data Engineer** | Pipeline crypto · ETL Open Data · Streaming X/Twitter · Data Quality Platform · Modern Data Stack |
+| ⚙️ **Data Engineer** | Pipeline crypto · ETL Open Data · Streaming Bluesky · Data Quality Platform · Modern Data Stack |
 
 ---
 
@@ -430,7 +430,7 @@ L'entreprise a 25% de turnover (vs 15% marché). Chaque départ coûte 50k€. O
 
 **📊 Dataset**
 - **Source** : [IBM HR Analytics](https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset)
-- **Glassdoor API** : [API non officielle](https://github.com/scrapfly/glassdoor-scraper) pour benchmarks
+- **Adzuna API** : [API gratuite](https://developer.adzuna.com/) pour benchmarks salaires marché
 - **Volume** : 1,470 employés avec 35 variables
 - **Features** : Satisfaction, salaire, promotion, distance
 
@@ -589,35 +589,34 @@ flowchart LR
 
 ---
 
-### 13. Streaming Twitter/X Analytics
+### 13. Streaming Bluesky Analytics
 
 **🎯 Problématique Business**
-Analyser les tendances Twitter nécessite du traitement temps réel. Objectif : pipeline de sentiment analysis sur sujets trending.
+Analyser les tendances sociales nécessite du traitement en flux continu. Objectif : pipeline de sentiment analysis sur sujets trending en temps réel.
 
 **📊 Dataset**
-- **Source streaming** : [Twitter API v2](https://developer.twitter.com/en/docs/twitter-api) (gratuit limité)
-- **Alternative** : [ntscraper](https://github.com/bocchilorenzo/ntscraper) (sans API)
-- **Volume** : 1000 tweets/minute sur keywords
-- **Features** : Texte, metrics, user info, géo
+- **Source streaming** : [Bluesky Jetstream](https://docs.bsky.app/docs/advanced-guides/firehose) (WebSocket public, sans authentification)
+- **Volume** : ~300-500 événements/seconde sur le firehose complet, filtrable par keywords
+- **Features** : Texte, métriques d'engagement, user info, timestamps
 
 **🏗️ Architecture Technique**
 ```mermaid
 flowchart LR
-    A[Twitter API\nScraper] --> B[Kafka\nProducer]
+    A[Bluesky\nJetstream WS] --> B[Kafka\nProducer]
     B --> C[Spark Streaming\nProcessing]
     C --> D[Storage\nPostgreSQL · Redis]
     D --> E[Dashboard\nGrafana · Power BI]
 ```
 
 **📦 Livrables Attendus**
-1. **Producer Kafka** pour ingestion tweets
+1. **Producer Kafka** pour ingestion événements Bluesky
 2. **Spark Streaming** pour processing temps réel
 3. **Pipeline ML** sentiment avec scikit-learn
 4. **Storage PostgreSQL** pour analytics
 5. **Dashboard temps réel** Grafana ou Power BI
 
 **🎯 Critères de Réussite**
-- Processing < 1 sec par batch de tweets
+- Processing < 1 sec par batch
 - Détection trending topics en temps réel
 - Architecture scalable avec Kafka/Spark
 

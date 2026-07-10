@@ -1,12 +1,12 @@
-# ⚙️ Streaming Twitter/X Analytics
+# ⚙️ Streaming Bluesky Analytics
 
-> Pipeline temps réel de sentiment analysis sur les tendances Twitter/X.
+> Pipeline temps réel de sentiment analysis sur les tendances Bluesky.
 
 ## 📊 Problématique Business
 
-**Contexte** : Analyser les tendances Twitter nécessite du traitement en flux continu, pas des snapshots.
+**Contexte** : Analyser les tendances sociales nécessite du traitement en flux continu, pas des snapshots.
 
-**Défi** : Ingérer, enrichir et analyser 1000 tweets/minute avec une latence de traitement < 1 seconde.
+**Défi** : Ingérer, enrichir et analyser des centaines d'événements/seconde avec une latence de traitement < 1 seconde.
 
 **Objectif** : Détecter les **trending topics et leur sentiment** en temps réel sur des keywords ciblés.
 
@@ -14,9 +14,8 @@
 
 ## 🗂️ Dataset
 
-- **Source streaming** : [Twitter API v2](https://developer.twitter.com/en/docs/twitter-api) (gratuit limité)
-- **Alternative sans API** : [ntscraper](https://github.com/bocchilorenzo/ntscraper)
-- **Volume** : ~1 000 tweets/minute sur keywords configurables
+- **Source streaming** : [Bluesky Jetstream](https://docs.bsky.app/docs/advanced-guides/firehose) — WebSocket public, sans authentification requise
+- **Volume** : ~300-500 événements/seconde sur le firehose complet, filtrable par keywords
 - **Features** : Texte, métriques d'engagement, user info, géolocalisation
 
 ---
@@ -45,8 +44,8 @@
 ## 📦 Structure
 
 ```
-13-streaming-twitter-analytics/
-├── producer/           # Kafka producer (ingestion tweets)
+13-streaming-bluesky-analytics/
+├── producer/           # Kafka producer (ingestion Jetstream)
 ├── consumer/           # Spark Streaming processing
 ├── ml/                 # Modèle sentiment
 ├── storage/            # Schémas PostgreSQL
@@ -70,6 +69,6 @@
 
 ## 📚 Ressources
 
-- [Twitter API v2 Docs](https://developer.twitter.com/en/docs/twitter-api)
+- [Bluesky Jetstream Docs](https://docs.bsky.app/docs/advanced-guides/firehose)
 - [Apache Kafka Quickstart](https://kafka.apache.org/quickstart)
 - [Spark Structured Streaming](https://spark.apache.org/docs/latest/structured-streaming-programming-guide.html)

@@ -13,6 +13,7 @@
 ## 🗂️ Dataset
 
 - **Source** : [IBM HR Analytics - Kaggle](https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset)
+- **Benchmark marché** : [Adzuna API](https://developer.adzuna.com/) (gratuit, salaires réels extraits des offres d'emploi)
 - **Volume** : 1,470 employés avec 35 variables
 - **Target** : Attrition (Yes/No)
 
