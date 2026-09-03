@@ -1,6 +1,6 @@
 ![Bannière du repo](assets/github-banner.avif)
 
-# 15 Projets Data pour un Portfolio Professionnel
+# 15 Projets data pour un *Portfolio Professionnel*
 
 Ton GitHub ne te vend pas. Ce repo t'aide à changer ça.
 
