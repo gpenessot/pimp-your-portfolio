@@ -2,9 +2,7 @@
 
 # 15 Projets data pour un *Portfolio Professionnel*
 
-Ton GitHub ne te vend pas. Ce repo t'aide à changer ça.
-
-> "Rends-toi visible par ce que tu produis, pas par ce qu'on t'autorise à faire."
+Ton GitHub ne te vend pas, ce repo t'aide à changer ça :)
 
 ---
 
