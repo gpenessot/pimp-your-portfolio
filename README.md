@@ -37,7 +37,7 @@ Ton GitHub ne te vend pas, ce repo t'aide à changer ça :)
 
 ## Le problème
 
-95% des data analysts/scientists ont un GitHub avec :
+La plupart des GitHub de data analysts et data scientists tiennent en :
 - des repos "test" ou "titanic_kaggle"
 - zéro README lisible
 - rien de déployé
@@ -73,10 +73,9 @@ la structure, les outils et la méthode pour les réaliser.
 
 | Ton besoin | La solution | Prix |
 |---|---|---|
-| **J'ai un week-end, je veux shipper 3 projets pros** | [ShipData — Le boilerplate data](https://www.mes-formations-data.fr/formation/shipdata) | 49€ |
-| **Je veux le système complet : GitHub + LinkedIn + stratégie** | [Portfolio Impactant — La formation complète](https://www.mes-formations-data.fr/formation/portfolio-impactant) | 197€ |
-| **Je veux créer des apps Streamlit production-ready** | [Streamlit Unleashed — Apps que les recruteurs bookmarkent](https://www.mes-formations-data.fr/formation/streamlit-unleashed) | 297€ |
-| **Je veux construire des apps data Python que les outils BI ne savent pas faire** | [Data App Builder — L'incubateur 6 semaines](https://www.mes-formations-data.fr/formation/bi-avec-python) | 990€ |
+| **J'ai un week-end, je veux shipper 3 projets pros** | [ShipData, le boilerplate data](https://www.mes-formations-data.fr/formation/shipdata) | 49€ |
+| **Je veux le système complet : GitHub + LinkedIn + stratégie** | [Portfolio Impactant, la formation complète](https://www.mes-formations-data.fr/formation/portfolio-impactant) | 197€ |
+| **Je veux créer des apps Streamlit production-ready** | [Streamlit Unleashed, des apps que les recruteurs bookmarkent](https://www.mes-formations-data.fr/formation/streamlit-unleashed) | 297€ |
 
 ---
 
