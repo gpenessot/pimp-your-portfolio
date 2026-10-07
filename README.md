@@ -49,7 +49,7 @@ Résultat : les recruteurs passent, les opportunités aussi.
 
 ## Ce que contient ce repo (gratuit)
 
-**15 projets data avec de vraies problématiques business** — pas du Titanic.
+**15 projets data avec de vraies problématiques business**, pas du Titanic.
 
 Chaque projet inclut :
 - Une problématique métier réelle chiffrée
@@ -68,25 +68,36 @@ Chaque projet inclut :
 
 ## Tu veux aller plus loin ?
 
-Ce repo te donne les idées. Les formations ci-dessous te donnent 
-la structure, les outils et la méthode pour les réaliser.
+Ce repo te donne des idées de projets. Mais un projet que tu inventes seul ne ressemble pas à ce qu'on te demande en poste : pas de code hérité, pas de contrainte, personne pour te dire si c'est livrable.
+
+### [Hard Mode](https://www.mes-formations-data.fr/hard-mode?utm_source=github&utm_medium=readme&utm_campaign=pimp-your-portfolio&utm_content=hard-mode)
+
+**Reprendre un projet data en vrac, le remettre en ligne, puis construire le tien.**
+
+Dix semaines. Huit sur un chantier fourni, deux sur ton propre sujet. Tu en sors avec deux dépôts publics, une application déployée, une CI verte et des notes de décision que tu peux défendre en entretien.
+
+Pour les data analysts et data scientists qui ont les bases et qui bloquent dès qu'il n'y a plus de guide.
+
+**[Candidater à Hard Mode →](https://www.mes-formations-data.fr/hard-mode?utm_source=github&utm_medium=readme&utm_campaign=pimp-your-portfolio&utm_content=hard-mode-cta)**
+
+### Plutôt en autonomie ?
 
 | Ton besoin | La solution | Prix |
 |---|---|---|
-| **J'ai un week-end, je veux shipper 3 projets pros** | [ShipData, le boilerplate data](https://www.mes-formations-data.fr/formation/shipdata) | 49€ |
-| **Je veux le système complet : GitHub + LinkedIn + stratégie** | [Portfolio Impactant, la formation complète](https://www.mes-formations-data.fr/formation/portfolio-impactant) | 197€ |
-| **Je veux créer des apps Streamlit production-ready** | [Streamlit Unleashed, des apps que les recruteurs bookmarkent](https://www.mes-formations-data.fr/formation/streamlit-unleashed) | 297€ |
+| **J'ai un week-end, je veux shipper 3 projets pros** | [ShipData, le boilerplate data](https://www.mes-formations-data.fr/formation/shipdata?utm_source=github&utm_medium=readme&utm_campaign=pimp-your-portfolio&utm_content=shipdata) | 49€ |
+| **Je veux le système complet : GitHub + LinkedIn + stratégie** | [Portfolio Impactant, la formation complète](https://www.mes-formations-data.fr/formation/portfolio-impactant?utm_source=github&utm_medium=readme&utm_campaign=pimp-your-portfolio&utm_content=portfolio-impactant) | 197€ |
+| **Je veux créer des apps Streamlit production-ready** | [Streamlit Unleashed, des apps que les recruteurs bookmarkent](https://www.mes-formations-data.fr/formation/streamlit-unleashed?utm_source=github&utm_medium=readme&utm_campaign=pimp-your-portfolio&utm_content=streamlit-unleashed) | 297€ |
 
 ---
 
 ## Qui suis-je ?
 
-**Gaël Penessot** — TOP 10 Data Science France (Favikon)
+**Gaël Penessot**, TOP 10 Data Science France (Favikon)
 
 - 📚 Auteur "Business Intelligence avec Python" (ENI Editions, 600+ ventes)
 - 🎓 Formateur LinkedIn Learning
-- 💼 29k+ abonnés LinkedIn
-- 📬 Newsletter [DataGyver](lien) — tips data chaque mois
+- 💼 30k+ abonnés LinkedIn
+- 📬 Newsletter [DataGyver](https://pim.ms/t8Oupvs) : tips data chaque mois
 
 ---
 
